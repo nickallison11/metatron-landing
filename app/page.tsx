@@ -48,7 +48,7 @@ export default function Home() {
         <nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <a href="#" className="shrink-0">
             <Image
-              src="https://metatron.id/wp-content/uploads/2026/03/metatron-_Logo.png"
+              src="/metatron-logo.png"
               alt="metatron"
               width={180}
               height={42}
