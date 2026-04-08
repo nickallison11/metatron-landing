@@ -7,9 +7,6 @@ const PLATFORM = "https://platform.metatron.id";
 const SIGNUP_FOUNDER = `${PLATFORM}/auth/signup?role=founder`;
 const TELEGRAM_KEVIN = "https://t.me/Kevinmetatron_bot";
 const METATRON_DAO = "https://metatrondao.io";
-const TERMS = "https://metatrondao.io/terms";
-const PRIVACY = "https://metatrondao.io/cookie-policy/";
-
 export default function Home() {
   const [billing, setBilling] = useState<"monthly" | "annual">("monthly");
   const [waitlistName, setWaitlistName] = useState("");
@@ -62,6 +59,12 @@ export default function Home() {
               className="transition hover:text-[var(--text)]"
             >
               Kevin
+            </a>
+            <a
+              href="#pricing"
+              className="transition hover:text-[var(--text)]"
+            >
+              Pricing
             </a>
             <a
               href="#token"
@@ -241,7 +244,10 @@ export default function Home() {
         </section>
 
         {/* Pricing */}
-        <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <section
+          id="pricing"
+          className="mx-auto max-w-6xl scroll-mt-24 px-4 py-20 sm:px-6"
+        >
           <div className="text-center">
             <h2 className="text-3xl font-bold text-[var(--text)] sm:text-4xl">
               Simple, transparent pricing
@@ -519,21 +525,11 @@ export default function Home() {
             © 2026 metatron · Metatron DAO (Pty) Ltd · Cape Town, South Africa
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
-            <a
-              href={TERMS}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[var(--text)]"
-            >
+            <a href="/terms" className="hover:text-[var(--text)]">
               Terms
             </a>
             <span className="text-[var(--border)]">·</span>
-            <a
-              href={PRIVACY}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[var(--text)]"
-            >
+            <a href="/privacy" className="hover:text-[var(--text)]">
               Privacy
             </a>
             <span className="text-[var(--border)]">·</span>
