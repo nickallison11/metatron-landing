@@ -304,6 +304,9 @@ export default function Home() {
 
             {/* Founder Basic */}
             <div className="relative flex flex-col rounded-[var(--radius)] border-2 border-[var(--accent)] bg-[var(--bg-card)] p-6 shadow-[0_0_40px_rgba(108,92,231,0.15)]">
+              <span className="absolute right-4 top-4 rounded-full border border-[var(--border)] bg-[#1a1a24] px-2.5 py-0.5 text-xs text-[var(--text-muted)]">
+                Coming soon
+              </span>
               <h3 className="text-lg font-semibold text-[var(--text)]">
                 Founder Basic
               </h3>
@@ -332,14 +335,6 @@ export default function Home() {
                 <li>· Full pitch management</li>
                 <li>· Full contact card on intros</li>
               </ul>
-              <a
-                href={SIGNUP_FOUNDER}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex justify-center rounded-lg bg-[var(--accent)] px-4 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--accent-hover)]"
-              >
-                Get started
-              </a>
             </div>
 
             {/* Founder Pro */}
@@ -522,7 +517,7 @@ export default function Home() {
       <footer className="border-t border-[var(--border)] py-12">
         <div className="mx-auto max-w-6xl px-4 text-center text-sm text-[var(--text-muted)] sm:px-6">
           <p>
-            © 2026 metatron · Metatron DAO (Pty) Ltd · Cape Town, South Africa
+            © 2026 metatron (Pty) Ltd · Cape Town, South Africa
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
             <a href="/terms" className="hover:text-[var(--text)]">

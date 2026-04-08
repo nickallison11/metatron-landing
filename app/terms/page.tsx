@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms and Conditions — metatron",
   description:
-    "Terms and conditions for the metatron website and MetatronDAO communications.",
+    "Terms and conditions for the metatron website and metatron communications.",
 };
 
 export default function TermsPage() {
@@ -39,7 +39,7 @@ export default function TermsPage() {
 
         <p className="mt-8 leading-relaxed text-[var(--text-muted)]">
           These terms and conditions apply to this website and all communication
-          which originates from or references MetatronDAO or its subsidiaries.
+          which originates from or references metatron or its subsidiaries.
         </p>
         <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
           Your access to, use and/or consumption of our website or
@@ -78,29 +78,29 @@ export default function TermsPage() {
               <dt className="font-medium text-[var(--text)]">Contractors</dt>
               <dd className="mt-1 leading-relaxed">
                 any legal or natural person who is contracted to render services
-                or provide products to MetatronDAO and who is not an employee
+                or provide products to metatron and who is not an employee
                 (&apos;contractor&apos; has a corresponding meaning)
               </dd>
             </div>
             <div>
               <dt className="font-medium text-[var(--text)]">Employees</dt>
               <dd className="mt-1 leading-relaxed">
-                employees of MetatronDAO (&apos;employee&apos; has a
+                employees of metatron (&apos;employee&apos; has a
                 corresponding meaning)
               </dd>
             </div>
             <div>
-              <dt className="font-medium text-[var(--text)]">MetatronDAO</dt>
+              <dt className="font-medium text-[var(--text)]">metatron</dt>
               <dd className="mt-1 leading-relaxed">
-                means and/or is a reference to Metatron DAO (Pty) Ltd
+                means and/or is a reference to metatron (Pty) Ltd
               </dd>
             </div>
             <div>
               <dt className="font-medium text-[var(--text)]">
-                MetatronDAO subsidiaries
+                metatron subsidiaries
               </dt>
               <dd className="mt-1 leading-relaxed">
-                MetatronDAO&apos;s subsidiary companies and/or trading divisions
+                metatron&apos;s subsidiary companies and/or trading divisions
                 and/or operating divisions
               </dd>
             </div>
@@ -147,21 +147,21 @@ export default function TermsPage() {
             Ownership and copyright
           </h2>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            This website and its content are owned by MetatronDAO and/or its
+            This website and its content are owned by metatron and/or its
             licensors and are protected by copyright and other intellectual
             property laws. All rights not expressly granted are reserved. Any
             unauthorized copying, production, retransmission, distribution,
             dissemination, sale, publication, broadcast or other circulation,
             or exploitation of this material will constitute an infringement of
-            such protection. The copyright in all material vesting in MetatronDAO
-            published on this website shall continue to vest in MetatronDAO.
+            such protection. The copyright in all material vesting in metatron
+            published on this website shall continue to vest in metatron.
           </p>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            Without detracting from the above, MetatronDAO authorizes you to
+            Without detracting from the above, metatron authorizes you to
             view, copy, download, print and distribute the content of this
             website, provided the content is used only for your information,
             non-commercial and private purposes. You are expressly prohibited
-            from incorporating any proprietary material of MetatronDAO and/or
+            from incorporating any proprietary material of metatron and/or
             its licensors taken from this website in any other work, publication
             or website either of your own or belonging to any third party.
           </p>
@@ -182,8 +182,8 @@ export default function TermsPage() {
           </h2>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
             The information and content accessible through this website is
-            provided by MetatronDAO as general information about MetatronDAO and
-            its services. MetatronDAO does not guarantee the suitability or
+            provided by metatron as general information about metatron and
+            its services. metatron does not guarantee the suitability or
             potential value of any information or particular investment source.
             No information or content on this website is intended to provide nor
             does it constitute financial, tax, legal, investment, or other
@@ -194,7 +194,7 @@ export default function TermsPage() {
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
             Nothing contained in any service provided or any content on this
             website constitutes a solicitation, recommendation, endorsement or
-            offer by MetatronDAO, including in regard to buying, selling or
+            offer by metatron, including in regard to buying, selling or
             holding any securities or making any investments.
           </p>
         </section>
@@ -206,9 +206,9 @@ export default function TermsPage() {
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
             The content on this website and the information contained therein is
             made available to you &apos;as is&apos; and &apos;as available&apos;.
-            MetatronDAO has taken and will continue to take care that all
+            metatron has taken and will continue to take care that all
             information provided on this website is true and correct in so far
-            as this is under MetatronDAO&apos;s control. However, MetatronDAO does
+            as this is under metatron&apos;s control. However, metatron does
             not warrant that this website, the content provided or information
             contained therein will be error-free or will meet any particular
             criteria of accuracy, completeness or reliability of information,
@@ -219,10 +219,10 @@ export default function TermsPage() {
             any information, links or service provided through this website.
           </p>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            Although MetatronDAO has taken reasonable measures to ensure the
+            Although metatron has taken reasonable measures to ensure the
             integrity of this website, including the content provided and the
             information contained therein, there is no warranty of any kind,
-            expressed or implied made by MetatronDAO, regarding the information
+            expressed or implied made by metatron, regarding the information
             or aspect of any service provided. Any warranty implied by law is
             hereby excluded except to the extent that such exclusion would be
             unlawful.
@@ -245,7 +245,7 @@ export default function TermsPage() {
           </p>
           <ul className="mt-4 list-disc space-y-2 pl-6 text-[var(--text-muted)]">
             <li>
-              Notify MetatronDAO of this fact immediately by email, fax or
+              Notify metatron of this fact immediately by email, fax or
               telephone and delete the communication from your system, where
               appropriate
             </li>
@@ -273,14 +273,14 @@ export default function TermsPage() {
             Liability limitation
           </h3>
           <p className="mt-3 leading-relaxed text-[var(--text-muted)]">
-            MetatronDAO does not warrant that any communication, the content
+            metatron does not warrant that any communication, the content
             provided or information contained therein will be error-free or will
             meet any particular criteria of accuracy, completeness or
             reliability of information, performance or quality.
           </p>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            Neither MetatronDAO, the communication&apos;s originator, or any
-            other MetatronDAO representative will be liable for any loss, damage
+            Neither metatron, the communication&apos;s originator, or any
+            other metatron representative will be liable for any loss, damage
             or expense of any nature (including without limitation, that caused
             by the corruption or loss of data, damage to software programs and
             interruption of business operations) resulting directly or
@@ -305,9 +305,9 @@ export default function TermsPage() {
           </ul>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
             The views and opinions expressed in the communication do not
-            necessarily reflect MetatronDAO&apos;s views and opinions. In
+            necessarily reflect metatron&apos;s views and opinions. In
             particular, no employee or contractor is permitted to send (and you
-            agree that MetatronDAO will not be liable or responsible for):
+            agree that metatron will not be liable or responsible for):
           </p>
           <ul className="mt-4 list-disc space-y-2 pl-6 text-[var(--text-muted)]">
             <li>
@@ -328,14 +328,14 @@ export default function TermsPage() {
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
             If the communication constitutes spam, contains infringing or
             offensive content, or was otherwise sent for purposes unrelated to
-            the official business of MetatronDAO, MetatronDAO will not be liable
+            the official business of metatron, metatron will not be liable
             for any loss, damage or expense of any nature, no matter how arising,
             resulting in your receipt, use and/or consumption of this email.
           </p>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            You consent to MetatronDAO monitoring, accessing, blocking,
+            You consent to metatron monitoring, accessing, blocking,
             deleting, copying or otherwise intercepting communication
-            originating from MetatronDAO and/or its employees and contractors
+            originating from metatron and/or its employees and contractors
             as well as any communication sent in response to the originating
             communication, where appropriate.
           </p>
@@ -344,7 +344,7 @@ export default function TermsPage() {
             Electronic communications
           </h3>
           <p className="mt-3 leading-relaxed text-[var(--text-muted)]">
-            By communicating with MetatronDAO through electronic means, you
+            By communicating with metatron through electronic means, you
             consent to receiving communications electronically and agree that
             all agreements, notices, disclosures and all other communications
             transmitted by electronic means satisfy any legal requirement,
@@ -353,8 +353,8 @@ export default function TermsPage() {
           </p>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
             Unless otherwise agreed, an email is only considered to be received
-            by MetatronDAO once we have confirmed receipt; and an email is only
-            considered to be sent by MetatronDAO once reflected as
+            by metatron once we have confirmed receipt; and an email is only
+            considered to be sent by metatron once reflected as
             &apos;sent&apos; on our email server.
           </p>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
@@ -362,7 +362,7 @@ export default function TermsPage() {
             susceptible to monitoring and interception and you bear the risk of
             such submissions and you waive any claims you may have for any
             losses you may suffer as a result of information transmitted to
-            MetatronDAO and which may be monitored and/or intercepted. We
+            metatron and which may be monitored and/or intercepted. We
             reserve the right to request independent verification of any
             information transmitted to us using electronic communications.
           </p>
@@ -372,9 +372,9 @@ export default function TermsPage() {
           </h3>
           <p className="mt-3 leading-relaxed text-[var(--text-muted)]">
             You agree that you may not rely on the communication, either wholly
-            or in part, as constituting a contract between you and MetatronDAO
+            or in part, as constituting a contract between you and metatron
             (or otherwise has any contractual significance whatsoever) unless
-            MetatronDAO expressly states, in writing, that the communication is
+            metatron expressly states, in writing, that the communication is
             intended for such purposes.
           </p>
         </section>
@@ -384,7 +384,7 @@ export default function TermsPage() {
             Privacy and data security statement
           </h2>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            This statement sets out what personal information MetatronDAO
+            This statement sets out what personal information metatron
             collects and how we use it. The statement applies to any information,
             including personal and special personal information, given to us, or
             which we may collect from third parties.
@@ -394,7 +394,7 @@ export default function TermsPage() {
             unalterable provisions of Applicable Laws.
           </p>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            MetatronDAO takes the privacy and protection of personal information
+            metatron takes the privacy and protection of personal information
             very seriously, and we will only use personal information in
             accordance with this statement and applicable data protection
             legislation. It is important that all necessary and appropriate steps
@@ -402,7 +402,7 @@ export default function TermsPage() {
             that all passwords and access codes are kept secure.
           </p>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            MetatronDAO have implemented a variety of security measures to
+            metatron has implemented a variety of security measures to
             maintain the safety of personal information when entered, submitted,
             or accessed. These measures include technological, physical and
             administrative procedures to protect personal information from loss,
@@ -650,7 +650,7 @@ export default function TermsPage() {
             Amendments
           </h2>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            MetatronDAO reserves the right to suspend, terminate, replace or
+            metatron reserves the right to suspend, terminate, replace or
             modify these terms and conditions, its website, any
             communication services, its policies and statements any time without
             notice. Any changes will appear in this document, which you can
@@ -673,12 +673,12 @@ export default function TermsPage() {
 
         <section className="mt-12 border-t border-[var(--border)] pt-12">
           <h2 className="text-xl font-semibold text-[var(--text)] sm:text-2xl">
-            MetatronDAO&apos;s contact details
+            metatron&apos;s contact details
           </h2>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            If you wish to contact MetatronDAO regarding these terms and
+            If you wish to contact metatron regarding these terms and
             conditions, you may refer a query, complaint and/or comment to
-            MetatronDAO at{" "}
+            metatron at{" "}
             <a
               href="mailto:legal@metatrondao.io"
               className="text-[var(--accent)] underline-offset-2 hover:underline"
