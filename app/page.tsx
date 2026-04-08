@@ -376,11 +376,9 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-[var(--text)]">Free</h3>
               <p className="mt-4 text-3xl font-bold text-[var(--text)]">$0</p>
               <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
-                <li>· Kevin AI chat (20 messages/day)</li>
-                <li>· Kevin on Telegram</li>
-                <li>· Kevin on WhatsApp</li>
-                <li>· Founder profile</li>
-                <li>· Cloud deck link</li>
+                <li>· Kevin AI chat (20 msg/day)</li>
+                <li>· Kevin on Telegram &amp; WhatsApp</li>
+                <li>· Founder profile + cloud deck link</li>
                 <li>· 1 investor match/week</li>
               </ul>
               <a
@@ -403,7 +401,7 @@ export default function Home() {
               </h3>
               {billing === "monthly" ? (
                 <p className="mt-4 text-3xl font-bold text-[var(--text)]">
-                  $19.99
+                  $9.99
                   <span className="text-base font-normal text-[var(--text-muted)]">
                     {" "}
                     /mo
@@ -411,7 +409,7 @@ export default function Home() {
                 </p>
               ) : (
                 <p className="mt-4 text-3xl font-bold text-[var(--text)]">
-                  $199
+                  $99.99
                   <span className="text-base font-normal text-[var(--text-muted)]">
                     {" "}
                     /yr
@@ -419,11 +417,13 @@ export default function Home() {
                 </p>
               )}
               <p className="mt-1 text-xs text-[var(--text-muted)]">
-                {billing === "monthly" ? "per month" : "per year (est.)"}
+                {billing === "monthly"
+                  ? "or $99.99/yr (save ~2 months)"
+                  : "save ~2 months vs monthly"}
               </p>
               <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
                 <li>· Everything in Free</li>
-                <li>· Kevin AI chat (200 messages/day)</li>
+                <li>· Kevin AI chat (200 msg/day)</li>
                 <li>· Call recording + AI analysis</li>
                 <li>· 10 investor matches/week</li>
                 <li>· Permanent IPFS deck storage</li>
@@ -439,23 +439,38 @@ export default function Home() {
             </div>
 
             {/* Founder Pro */}
-            <div className="relative flex flex-col rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)]/80 p-6 opacity-75">
+            <div className="relative flex flex-col rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-6">
               <span className="absolute right-4 top-4 rounded-full border border-[var(--border)] bg-[#1a1a24] px-2.5 py-0.5 text-xs text-[var(--text-muted)]">
                 Coming soon
               </span>
               <h3 className="text-lg font-semibold text-[var(--text)]">
                 Founder Pro
               </h3>
-              <p className="mt-4 text-sm text-[var(--text-muted)]">
-                Pricing at launch
+              {billing === "monthly" ? (
+                <p className="mt-4 text-3xl font-bold text-[var(--text)]">
+                  $19.99
+                  <span className="text-base font-normal text-[var(--text-muted)]">
+                    {" "}
+                    /mo
+                  </span>
+                </p>
+              ) : (
+                <p className="mt-4 text-3xl font-bold text-[var(--text)]">
+                  $199.99
+                  <span className="text-base font-normal text-[var(--text-muted)]">
+                    {" "}
+                    /yr
+                  </span>
+                </p>
+              )}
+              <p className="mt-1 text-xs text-[var(--text-muted)]">
+                {billing === "monthly" ? "or $199.99/yr" : "per year"}
               </p>
               <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
                 <li>· Everything in Basic</li>
-                <li>· Unlimited Kevin messages</li>
-                <li>· Unlimited investor matches</li>
+                <li>· Unlimited Kevin messages + matches</li>
                 <li>· Private encrypted IPFS deck</li>
-                <li>· Angel Score</li>
-                <li>· Virtual Data Room (VDR)</li>
+                <li>· Angel Score + VDR</li>
                 <li>· Custom AI backend</li>
                 <li>· Custom subdomain (startup.metatron.id)</li>
                 <li>· Embeddable widget</li>
