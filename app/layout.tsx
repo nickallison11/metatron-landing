@@ -1,5 +1,6 @@
 import "./globals.css";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 const dmSans = DM_Sans({
@@ -14,11 +15,14 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title:
     "metatron — The intelligence layer connecting founders and investors globally",
   description:
     "metatron is an AI agent network for founder-investor matchmaking in emerging markets.",
+  icons: {
+    icon: [{ url: "/favicon-icon.png", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
