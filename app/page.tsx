@@ -287,10 +287,12 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-[var(--text)]">Free</h3>
               <p className="mt-4 text-3xl font-bold text-[var(--text)]">$0</p>
               <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
-                <li>· Kevin AI copilot</li>
+                <li>· Kevin AI chat (20 messages/day)</li>
+                <li>· Kevin on Telegram</li>
+                <li>· Kevin on WhatsApp</li>
                 <li>· Founder profile</li>
-                <li>· External pitch deck link</li>
-                <li>· Community access</li>
+                <li>· Cloud deck link</li>
+                <li>· 1 investor match/week</li>
               </ul>
               <a
                 href={SIGNUP_FOUNDER}
@@ -312,29 +314,39 @@ export default function Home() {
               </h3>
               {billing === "monthly" ? (
                 <p className="mt-4 text-3xl font-bold text-[var(--text)]">
-                  $9.99{" "}
+                  $19.99
                   <span className="text-base font-normal text-[var(--text-muted)]">
-                    / R169.99
+                    {" "}
+                    /mo
                   </span>
                 </p>
               ) : (
                 <p className="mt-4 text-3xl font-bold text-[var(--text)]">
-                  $99.99{" "}
+                  $199
                   <span className="text-base font-normal text-[var(--text-muted)]">
-                    / R1,699.99
+                    {" "}
+                    /yr
                   </span>
                 </p>
               )}
               <p className="mt-1 text-xs text-[var(--text-muted)]">
-                {billing === "monthly" ? "per month" : "per year"}
+                {billing === "monthly" ? "per month" : "per year (est.)"}
               </p>
               <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
                 <li>· Everything in Free</li>
-                <li>· IPFS pitch deck storage</li>
-                <li>· Call intelligence</li>
-                <li>· Full pitch management</li>
-                <li>· Full contact card on intros</li>
+                <li>· Kevin AI chat (200 messages/day)</li>
+                <li>· Call recording + AI analysis</li>
+                <li>· 10 investor matches/week</li>
+                <li>· Permanent IPFS deck storage</li>
+                <li>· Kevin extracts pitch data from deck</li>
               </ul>
+              <button
+                type="button"
+                disabled
+                className="mt-8 inline-flex w-full cursor-not-allowed items-center justify-center rounded-lg border border-[var(--border)] bg-[#1a1a24] px-4 py-2.5 text-sm font-medium text-[var(--text-muted)]"
+              >
+                Coming soon
+              </button>
             </div>
 
             {/* Founder Pro */}
@@ -345,30 +357,27 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-[var(--text)]">
                 Founder Pro
               </h3>
-              {billing === "monthly" ? (
-                <p className="mt-4 text-3xl font-bold text-[var(--text)]">
-                  $19.99{" "}
-                  <span className="text-base font-normal text-[var(--text-muted)]">
-                    / R339.99
-                  </span>
-                </p>
-              ) : (
-                <p className="mt-4 text-3xl font-bold text-[var(--text)]">
-                  $199.99{" "}
-                  <span className="text-base font-normal text-[var(--text-muted)]">
-                    / R3,399.99
-                  </span>
-                </p>
-              )}
-              <p className="mt-1 text-xs text-[var(--text-muted)]">
-                {billing === "monthly" ? "per month" : "per year"}
+              <p className="mt-4 text-sm text-[var(--text-muted)]">
+                Pricing at launch
               </p>
               <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
-                <li>· Everything in Founder Basic</li>
-                <li>· Dedicated Kevin agent</li>
-                <li>· yourname.metatron.id subdomain</li>
+                <li>· Everything in Basic</li>
+                <li>· Unlimited Kevin messages</li>
+                <li>· Unlimited investor matches</li>
+                <li>· Private encrypted IPFS deck</li>
+                <li>· Angel Score</li>
+                <li>· Virtual Data Room (VDR)</li>
+                <li>· Custom AI backend</li>
+                <li>· Custom subdomain (startup.metatron.id)</li>
                 <li>· Embeddable widget</li>
               </ul>
+              <button
+                type="button"
+                disabled
+                className="mt-8 inline-flex w-full cursor-not-allowed items-center justify-center rounded-lg border border-[var(--border)] bg-[#1a1a24] px-4 py-2.5 text-sm font-medium text-[var(--text-muted)]"
+              >
+                Coming soon
+              </button>
             </div>
           </div>
 
