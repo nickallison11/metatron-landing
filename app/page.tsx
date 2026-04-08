@@ -578,7 +578,6 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-12 space-y-4">
-            {/* Row 1: Platform, WhatsApp (coming soon), Telegram */}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               <a
                 href={PLATFORM}
@@ -597,7 +596,7 @@ export default function Home() {
                 <div className="min-w-0 flex-1">
                   <div className="font-medium text-[var(--text)]">Platform</div>
                   <div className="mt-0.5 break-words text-sm text-[var(--text-muted)]">
-                    metatron.id
+                    platform.metatron.id
                   </div>
                 </div>
               </a>
@@ -633,7 +632,6 @@ export default function Home() {
                 </div>
               </a>
             </div>
-            {/* Row 2: LinkedIn, X, Discord */}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               {(
                 [
@@ -695,15 +693,6 @@ export default function Home() {
             </a>
             <span className="text-[var(--border)]">·</span>
             <span className="inline-flex items-center gap-3">
-              {/* eslint-disable-next-line @next/next/no-img-element -- decorative brand mark beside social icons */}
-              <img
-                src="/favicon-icon.png"
-                alt=""
-                width={20}
-                height={20}
-                className="h-5 w-5 shrink-0 object-contain opacity-90"
-                aria-hidden
-              />
               <a
                 href={LINKEDIN_URL}
                 target="_blank"
