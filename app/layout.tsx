@@ -21,7 +21,9 @@ export const metadata: Metadata = {
   description:
     "metatron is an AI agent network for founder-investor matchmaking in emerging markets.",
   icons: {
-    icon: [{ url: "/favicon-icon.png", type: "image/png" }],
+    icon: "/favicon-icon.png",
+    shortcut: "/favicon-icon.png",
+    apple: "/favicon-icon.png",
   },
 };
 

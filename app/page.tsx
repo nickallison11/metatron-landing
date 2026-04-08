@@ -478,11 +478,11 @@ export default function Home() {
           {/* Waitlist */}
           <div className="mx-auto mt-16 max-w-lg rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-8 text-center">
             <h3 className="text-xl font-semibold text-[var(--text)]">
-              Be first to access Founder Pro
+              Be first to access Founder Basic & Pro
             </h3>
             <p className="mt-2 text-sm text-[var(--text-muted)]">
-              Founder Pro is coming soon. Join the waitlist and we&apos;ll notify
-              you when it launches.
+              Founder Basic and Pro are coming soon. Join the waitlist and
+              we&apos;ll notify you when they launch.
             </p>
             {waitlistStatus === "success" ? (
               <p className="mt-6 text-[var(--accent-teal)]">
