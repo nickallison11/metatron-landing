@@ -1,5 +1,6 @@
 "use client";
 
+import { ThemeToggleButton } from "@/components/ThemeProvider";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -130,7 +131,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--border)] bg-[rgba(10,10,15,0.85)] backdrop-blur-md">
+      <header className="nav-metatron fixed top-0 left-0 right-0 z-50 border-b border-[var(--border)]">
         <nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <a href="#" className="shrink-0">
             <Image
@@ -175,6 +176,7 @@ export default function Home() {
             >
               Launch app
             </a>
+            <ThemeToggleButton />
           </div>
         </nav>
       </header>

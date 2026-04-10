@@ -1,4 +1,5 @@
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
@@ -29,13 +30,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${dmSans.variable} ${jetbrainsMono.variable} font-sans`}
       >
-        <div className="grid-bg" aria-hidden />
-        <div className="orb" aria-hidden />
-        <div className="relative z-10 min-h-screen">{children}</div>
+        <ThemeProvider>
+          <div className="orb" aria-hidden />
+          <div className="relative z-10 min-h-screen">{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   );

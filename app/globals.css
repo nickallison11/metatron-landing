@@ -14,6 +14,17 @@
   --radius: 12px;
 }
 
+html.light {
+  --bg: #f5f5f7;
+  --bg-card: #ffffff;
+  --text: #1a1a2e;
+  --text-muted: #6e6e82;
+  --border: rgba(0, 0, 0, 0.08);
+  --accent: #6c5ce7;
+  --accent-hover: #7d6ff0;
+  --accent-teal: #00cec9;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,6 +39,16 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-dm-sans), Arial, sans-serif;
+}
+
+.nav-metatron {
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+html.light .nav-metatron {
+  background: rgba(245, 245, 247, 0.85);
 }
 
 .grid-bg {
