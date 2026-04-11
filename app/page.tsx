@@ -291,29 +291,22 @@ export default function Home() {
             AI Agent Network — Now live on Solana
           </div>
           <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-[var(--text)] sm:text-5xl md:text-6xl">
-            The intelligence layer connecting founders and investors globally
+            The intelligence layer connecting founders, connectors and investors
+            globally
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--text-muted)] sm:text-xl">
-            metatron is an AI agent network for founder-investor matchmaking in
-            emerging markets. We are democratising access to startup investment
+            metatron is an AI agent network for founder-connector-investor
+            matchmaking in emerging markets. We are democratising access to startup investment
             across Africa and other underserved regions.
           </p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <div className="mt-10 flex justify-center">
             <a
               href={SIGNUP_FOUNDER}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-w-[200px] justify-center rounded-lg bg-[var(--accent)] px-8 py-3 font-medium text-white transition hover:bg-[var(--accent-hover)]"
             >
-              Get started free
-            </a>
-            <a
-              href={TELEGRAM_KEVIN}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-w-[200px] justify-center rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-8 py-3 font-medium text-[var(--text)] transition hover:border-[var(--accent)]/40"
-            >
-              Talk to Kevin on Telegram
+              Get started here
             </a>
           </div>
         </section>
@@ -395,9 +388,9 @@ export default function Home() {
                 Meet Kevin
               </h2>
               <p className="mt-4 text-[var(--text-muted)] leading-relaxed">
-                Kevin is metatron&apos;s AI agent. He lives on Telegram and the
-                web, learns about you, and makes introductions between founders
-                and investors that actually make sense.
+                Kevin is metatron&apos;s AI agent. He lives on the web, Telegram
+                and WhatsApp, learns about you, and makes introductions between
+                founders, connectors and investors that actually make sense.
               </p>
               <p className="mt-4 text-[var(--text-muted)] leading-relaxed">
                 No pitch decks lost in inboxes. No awkward networking events.
@@ -406,19 +399,10 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href={TELEGRAM_KEVIN}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--accent-hover)]"
-                >
-                  <EcosystemBrandLogo kind="telegram" size="sm" />
-                  Telegram
-                </a>
-                <a
                   href={PLATFORM}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-5 py-2.5 text-sm font-medium text-[var(--text)] transition hover:border-[var(--accent)]/40"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--accent-hover)]"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element -- small inline brand mark in link */}
                   <img
@@ -428,6 +412,26 @@ export default function Home() {
                   />
                   Platform
                 </a>
+                <a
+                  href={TELEGRAM_KEVIN}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-5 py-2.5 text-sm font-medium text-[var(--text)] transition hover:border-[var(--accent)]/40"
+                >
+                  <EcosystemBrandLogo kind="telegram" size="sm" />
+                  Telegram
+                </a>
+                <button
+                  type="button"
+                  disabled
+                  className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-5 py-2.5 text-sm font-medium text-[var(--text-muted)] opacity-60"
+                >
+                  <EcosystemBrandLogo kind="whatsapp" size="sm" />
+                  WhatsApp
+                  <span className="rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-1.5 py-0.5 text-[10px]">
+                    Soon
+                  </span>
+                </button>
               </div>
             </div>
           </div>

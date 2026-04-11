@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title:
-    "metatron — The intelligence layer connecting founders and investors globally",
+    "metatron — The intelligence layer connecting founders, connectors and investors globally",
   description:
     "metatron is an AI agent network for founder-investor matchmaking in emerging markets.",
   icons: {
