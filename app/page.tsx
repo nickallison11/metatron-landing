@@ -291,13 +291,12 @@ export default function Home() {
             AI Agent Network — Now live on Solana
           </div>
           <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-[var(--text)] sm:text-5xl md:text-6xl">
-            The intelligence layer connecting founders, connectors and investors
+            Eliminating information asymmetry between founders and capital —
             globally
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--text-muted)] sm:text-xl">
-            metatron is an AI agent network for founder-connector-investor
-            matchmaking in emerging markets. We are democratising access to startup investment
-            across Africa and other underserved regions.
+            AI-powered matchmaking for founders, connectors and investors in
+            emerging markets.
           </p>
           <div className="mt-10 flex justify-center">
             <a
