@@ -2,6 +2,7 @@
 
 import { ThemeToggleButton } from "@/components/ThemeProvider";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const PLATFORM = "https://platform.metatron.id";
@@ -113,6 +114,7 @@ export default function Home() {
   const [waitlistStatus, setWaitlistStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   async function handleWaitlistSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -140,18 +142,19 @@ export default function Home() {
   return (
     <>
       <header className="nav-metatron fixed top-0 left-0 right-0 z-50 border-b border-[var(--border)]">
-        <nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-3 sm:px-6">
-          <a href="#" className="shrink-0">
+        <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+          <Link href="/" className="flex shrink-0 items-center gap-2">
             <Image
               src="/metatron-logo.png"
               alt="metatron"
-              width={180}
+              width={140}
               height={42}
               className="h-[42px] w-auto"
               unoptimized
             />
-          </a>
-          <div className="flex flex-wrap items-center gap-4 text-sm text-[var(--text-muted)] sm:gap-6">
+          </Link>
+
+          <div className="hidden items-center gap-4 text-sm text-[var(--text-muted)] sm:gap-6 md:flex">
             <a
               href="#kevin"
               className="transition hover:text-[var(--text)]"
@@ -186,7 +189,88 @@ export default function Home() {
             </a>
             <ThemeToggleButton />
           </div>
+
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggleButton />
+            <button
+              type="button"
+              onClick={() => setMenuOpen((o) => !o)}
+              aria-label="Toggle menu"
+              className="rounded-lg border border-[var(--border)] p-2 text-[var(--text-muted)]"
+            >
+              {menuOpen ? (
+                <svg
+                  width={18}
+                  height={18}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              ) : (
+                <svg
+                  width={18}
+                  height={18}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden
+                >
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+              )}
+            </button>
+          </div>
         </nav>
+
+        {menuOpen && (
+          <div className="flex flex-col gap-4 border-t border-[var(--border)] bg-[var(--bg)] px-6 py-4 text-sm text-[var(--text-muted)] md:hidden">
+            <a
+              href="#kevin"
+              onClick={() => setMenuOpen(false)}
+              className="transition hover:text-[var(--text)]"
+            >
+              Kevin
+            </a>
+            <a
+              href="#pricing"
+              onClick={() => setMenuOpen(false)}
+              className="transition hover:text-[var(--text)]"
+            >
+              Pricing
+            </a>
+            <a
+              href="#token"
+              onClick={() => setMenuOpen(false)}
+              className="transition hover:text-[var(--text)]"
+            >
+              Token
+            </a>
+            <a
+              href="#ecosystem"
+              onClick={() => setMenuOpen(false)}
+              className="transition hover:text-[var(--text)]"
+            >
+              Ecosystem
+            </a>
+            <a
+              href={PLATFORM}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+              className="inline-flex w-fit rounded-lg bg-[var(--accent)] px-4 py-2 font-medium text-white transition hover:bg-[var(--accent-hover)]"
+            >
+              Launch app
+            </a>
+          </div>
+        )}
       </header>
 
       <main>
