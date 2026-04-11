@@ -14,10 +14,18 @@ const X_URL = "https://x.com/metatrondao";
 
 function EcosystemBrandLogo({
   kind,
+  size = "md",
 }: {
   kind: "linkedin" | "telegram" | "x" | "discord" | "whatsapp";
+  size?: "md" | "sm";
 }) {
-  const iconClass = "h-10 w-10 shrink-0";
+  const iconClass =
+    size === "sm" ? "h-5 w-5 shrink-0" : "h-10 w-10 shrink-0";
+  const xWrapClass =
+    size === "sm"
+      ? "flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-white"
+      : "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white";
+  const xSvgDim = size === "sm" ? 13 : 26;
   switch (kind) {
     case "linkedin":
       return (
@@ -49,12 +57,12 @@ function EcosystemBrandLogo({
       );
     case "x":
       return (
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white">
+        <span className={xWrapClass}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            width={26}
-            height={26}
+            width={xSvgDim}
+            height={xSvgDim}
             aria-hidden
           >
             <path
@@ -269,7 +277,7 @@ export default function Home() {
         >
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div
-              className="rounded-[var(--radius)] border border-[var(--border)] bg-[#0d0d14] p-5 font-mono text-sm leading-relaxed shadow-lg"
+              className="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-5 font-mono text-sm leading-relaxed shadow-lg"
               style={{ fontFamily: "var(--font-jetbrains-mono), monospace" }}
             >
               <div className="mb-4 flex gap-2">
@@ -317,17 +325,24 @@ export default function Home() {
                   href={TELEGRAM_KEVIN}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--accent-hover)]"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--accent-hover)]"
                 >
-                  💬 Telegram
+                  <EcosystemBrandLogo kind="telegram" size="sm" />
+                  Telegram
                 </a>
                 <a
                   href={PLATFORM}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-5 py-2.5 text-sm font-medium text-[var(--text)] transition hover:border-[var(--accent)]/40"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-5 py-2.5 text-sm font-medium text-[var(--text)] transition hover:border-[var(--accent)]/40"
                 >
-                  🌐 Platform
+                  {/* eslint-disable-next-line @next/next/no-img-element -- small inline brand mark in link */}
+                  <img
+                    src="/favicon-icon.png"
+                    alt="metatron"
+                    className="h-5 w-5"
+                  />
+                  Platform
                 </a>
               </div>
             </div>
@@ -395,7 +410,7 @@ export default function Home() {
 
             {/* Founder Basic */}
             <div className="relative flex flex-col rounded-[var(--radius)] border-2 border-[var(--accent)] bg-[var(--bg-card)] p-6 shadow-[0_0_40px_rgba(108,92,231,0.15)]">
-              <span className="absolute right-4 top-4 rounded-full border border-[var(--border)] bg-[#1a1a24] px-2.5 py-0.5 text-xs text-[var(--text-muted)]">
+              <span className="absolute right-4 top-4 rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-2.5 py-0.5 text-xs text-[var(--text-muted)]">
                 Coming soon
               </span>
               <h3 className="text-lg font-semibold text-[var(--text)]">
@@ -434,7 +449,7 @@ export default function Home() {
               <button
                 type="button"
                 disabled
-                className="mt-8 inline-flex w-full cursor-not-allowed items-center justify-center rounded-lg border border-[var(--border)] bg-[#1a1a24] px-4 py-2.5 text-sm font-medium text-[var(--text-muted)]"
+                className="mt-8 inline-flex w-full cursor-not-allowed items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-4 py-2.5 text-sm font-medium text-[var(--text-muted)]"
               >
                 Coming soon
               </button>
@@ -442,7 +457,7 @@ export default function Home() {
 
             {/* Founder Pro */}
             <div className="relative flex flex-col rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-6">
-              <span className="absolute right-4 top-4 rounded-full border border-[var(--border)] bg-[#1a1a24] px-2.5 py-0.5 text-xs text-[var(--text-muted)]">
+              <span className="absolute right-4 top-4 rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-2.5 py-0.5 text-xs text-[var(--text-muted)]">
                 Coming soon
               </span>
               <h3 className="text-lg font-semibold text-[var(--text)]">
@@ -480,7 +495,7 @@ export default function Home() {
               <button
                 type="button"
                 disabled
-                className="mt-8 inline-flex w-full cursor-not-allowed items-center justify-center rounded-lg border border-[var(--border)] bg-[#1a1a24] px-4 py-2.5 text-sm font-medium text-[var(--text-muted)]"
+                className="mt-8 inline-flex w-full cursor-not-allowed items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-4 py-2.5 text-sm font-medium text-[var(--text-muted)]"
               >
                 Coming soon
               </button>
@@ -513,7 +528,7 @@ export default function Home() {
                   placeholder="Full name"
                   value={waitlistName}
                   onChange={(e) => setWaitlistName(e.target.value)}
-                  className="w-full rounded-lg border border-[var(--border)] bg-[#0d0d14] px-4 py-3 text-sm text-[var(--text)] placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:outline-none"
+                  className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm text-[var(--text)] placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:outline-none"
                 />
                 <input
                   type="text"
@@ -521,7 +536,7 @@ export default function Home() {
                   placeholder="Startup name"
                   value={waitlistStartup}
                   onChange={(e) => setWaitlistStartup(e.target.value)}
-                  className="w-full rounded-lg border border-[var(--border)] bg-[#0d0d14] px-4 py-3 text-sm text-[var(--text)] placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:outline-none"
+                  className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm text-[var(--text)] placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:outline-none"
                 />
                 <input
                   type="email"
@@ -529,7 +544,7 @@ export default function Home() {
                   placeholder="Email"
                   value={waitlistEmail}
                   onChange={(e) => setWaitlistEmail(e.target.value)}
-                  className="w-full rounded-lg border border-[var(--border)] bg-[#0d0d14] px-4 py-3 text-sm text-[var(--text)] placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:outline-none"
+                  className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm text-[var(--text)] placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:outline-none"
                 />
                 <button
                   type="submit"
@@ -563,7 +578,7 @@ export default function Home() {
               The utility token powering access, incentives, and governance
               across the metatron network. Minted on Solana.
             </p>
-            <span className="mt-6 inline-block rounded-full border border-[var(--border)] bg-[#1a1a24] px-3 py-1 text-xs text-[var(--text-muted)]">
+            <span className="mt-6 inline-block rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-3 py-1 text-xs text-[var(--text-muted)]">
               Coming soon
             </span>
             <p className="mt-5 text-sm leading-relaxed text-[var(--text-muted)]">
@@ -621,7 +636,7 @@ export default function Home() {
                 className="relative flex cursor-not-allowed items-start gap-3 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)]/60 p-5 opacity-60"
                 aria-disabled="true"
               >
-                <span className="absolute right-3 top-3 rounded-full border border-[var(--border)] bg-[#1a1a24] px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
+                <span className="absolute right-3 top-3 rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
                   Coming soon
                 </span>
                 <EcosystemBrandLogo kind="whatsapp" />

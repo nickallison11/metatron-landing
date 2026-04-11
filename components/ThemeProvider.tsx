@@ -56,6 +56,15 @@ export function useTheme() {
 
 export function ThemeToggleButton() {
   const { theme, toggle } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const sun = "\u2600\uFE0F ";
+  const moon = "\uD83C\uDF19";
+
   return (
     <button
       type="button"
@@ -70,9 +79,10 @@ export function ThemeToggleButton() {
         cursor: "pointer",
         fontSize: 14,
         lineHeight: 1,
+        minWidth: 36,
       }}
     >
-      {theme === "dark" ? "\u2600\uFE0F " : "\uD83C\uDF19"}
+      {mounted ? (theme === "dark" ? sun : moon) : sun}
     </button>
   );
 }
