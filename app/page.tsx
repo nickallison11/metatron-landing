@@ -859,7 +859,7 @@ export default function Home() {
       <footer className="border-t border-[var(--border)] py-12">
         <div className="mx-auto max-w-6xl px-4 text-center text-sm text-[var(--text-muted)] sm:px-6">
           <p>
-            © 2026 metatron (Pty) Ltd · Cape Town, South Africa
+            © 2026 Metatron DAO (Pty) Ltd · Cape Town, South Africa
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
             <a href="/terms" className="hover:text-[var(--text)]">
