@@ -327,7 +327,7 @@ export default function Home() {
               {
                 icon: "🔗",
                 title: "On-Chain Identity",
-                body: "Every member gets a verifiable on-chain identity. Your track record, reputation, and connections — owned by you, not a platform.",
+                body: "When you join metatron, you get a portable, verifiable metatron ID. Your pitch data, track record, and connections are stored on IPFS — owned by you, not us. Take it anywhere.",
               },
             ].map((card) => (
               <div
@@ -431,6 +431,65 @@ export default function Home() {
                     Soon
                   </span>
                 </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Your metatron ID */}
+        <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <div className="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-10 md:p-16">
+            <div className="grid gap-12 lg:grid-cols-2 items-center">
+              <div>
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg)] px-3 py-1 text-xs text-[var(--text-muted)]">
+                  Your data. Your identity.
+                </div>
+                <h2 className="text-3xl font-bold text-[var(--text)] sm:text-4xl">
+                  You own your metatron ID
+                </h2>
+                <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
+                  When you create your metatron profile, your pitch data,
+                  documents, and track record are stored on IPFS — a
+                  decentralised network. We don&apos;t own your data. No one
+                  does but you.
+                </p>
+                <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
+                  Your metatron ID is portable and verifiable. If you ever leave
+                  the platform, your data leaves with you. No lock-in, no black
+                  box, no surprises.
+                </p>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  {
+                    title: "Decentralised storage",
+                    body: "Your pitch and profile data is pinned to IPFS — not stored in a database we control.",
+                  },
+                  {
+                    title: "You hold the keys",
+                    body: "Your data is tied to your identity, not our platform. It belongs to you.",
+                  },
+                  {
+                    title: "Verifiable on-chain",
+                    body: "Your track record is anchored on Solana — transparent, tamper-proof, and independently verifiable.",
+                  },
+                  {
+                    title: "No vendor lock-in",
+                    body: "Export or migrate your data at any time. We built this for founders, not for ourselves.",
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg)] p-5"
+                  >
+                    <h4 className="text-sm font-semibold text-[var(--text)]">
+                      {item.title}
+                    </h4>
+                    <p className="mt-2 text-xs leading-relaxed text-[var(--text-muted)]">
+                      {item.body}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
