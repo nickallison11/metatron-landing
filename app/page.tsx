@@ -169,7 +169,7 @@ export default function Home() {
             </a>
             <a
               href="#token"
-              className="transition hover:text-[var(--text)]"
+              className="hidden transition hover:text-[var(--text)]"
             >
               Token
             </a>
@@ -249,7 +249,7 @@ export default function Home() {
             <a
               href="#token"
               onClick={() => setMenuOpen(false)}
-              className="transition hover:text-[var(--text)]"
+              className="hidden transition hover:text-[var(--text)]"
             >
               Token
             </a>
@@ -555,7 +555,7 @@ export default function Home() {
             </div>
 
             {/* Founder Basic */}
-            <div className="relative flex flex-col rounded-[var(--radius)] border-2 border-[var(--accent)] bg-[var(--bg-card)] p-6 shadow-[0_0_40px_rgba(108,92,231,0.15)]">
+            <div className="relative flex flex-col rounded-[var(--radius)] border-2 border-[var(--accent)] bg-[var(--bg-card)] p-6 shadow-[0_0_40px_rgba(108,92,231,0.15)] blur-sm pointer-events-none select-none">
               <span className="absolute right-4 top-4 rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-2.5 py-0.5 text-xs text-[var(--text-muted)]">
                 Coming soon
               </span>
@@ -602,7 +602,7 @@ export default function Home() {
             </div>
 
             {/* Founder Pro */}
-            <div className="relative flex flex-col rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-6">
+            <div className="relative flex flex-col rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-6 blur-sm pointer-events-none select-none">
               <span className="absolute right-4 top-4 rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-2.5 py-0.5 text-xs text-[var(--text-muted)]">
                 Coming soon
               </span>
@@ -714,7 +714,7 @@ export default function Home() {
         {/* MTN Token */}
         <section
           id="token"
-          className="mx-auto max-w-6xl scroll-mt-24 px-4 py-20 sm:px-6"
+          className="mx-auto hidden max-w-6xl scroll-mt-24 px-4 py-20 sm:px-6"
         >
           <div className="mx-auto max-w-[600px] rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] px-6 py-10 text-center sm:px-8">
             <h2 className="text-3xl font-bold text-[var(--text)] sm:text-4xl">
