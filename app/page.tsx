@@ -315,17 +315,66 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
-                icon: "🤖",
+                icon: (
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+                    <path d="M20 3v4" />
+                    <path d="M22 5h-4" />
+                    <path d="M4 17v2" />
+                    <path d="M5 18H3" />
+                  </svg>
+                ),
                 title: "AI-Powered Matching",
                 body: "Kevin, our AI agent, learns what founders need and matches them with the right investors — no cold emails, no gatekeepers.",
               },
               {
-                icon: "🌍",
+                icon: (
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M2 12h20" />
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                ),
                 title: "Emerging Markets First",
                 body: "Built for Africa, Latin America, and Asia. The markets with the highest growth potential and the least access to capital.",
               },
               {
-                icon: "🔗",
+                icon: (
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                  </svg>
+                ),
                 title: "On-Chain Identity",
                 body: "When you join metatron, you get a portable, verifiable metatron ID. Your pitch data, track record, and connections are stored on IPFS — owned by you, not us. Take it anywhere.",
               },
@@ -334,7 +383,9 @@ export default function Home() {
                 key={card.title}
                 className="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-6"
               >
-                <div className="text-2xl">{card.icon}</div>
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--accent-teal)]">
+                  {card.icon}
+                </div>
                 <h3 className="mt-4 text-lg font-semibold text-[var(--text)]">
                   {card.title}
                 </h3>
