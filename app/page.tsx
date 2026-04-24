@@ -141,8 +141,8 @@ export default function Home() {
 
   return (
     <>
-      <header className="nav-metatron fixed top-0 left-0 right-0 z-50 border-b border-[var(--border)]">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+      <header className="nav-metatron fixed top-0 left-0 right-0 z-50">
+        <nav className="mx-auto flex max-w-6xl items-center justify-between border border-black px-4 py-3 sm:px-6">
           <Link href="/" className="flex shrink-0 items-center gap-2">
             <Image
               src="/metatron-logo.png"
@@ -856,10 +856,10 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-[var(--border)] py-12">
+      <footer className="py-12">
         <div className="mx-auto max-w-6xl px-4 text-center text-sm text-[var(--text-muted)] sm:px-6">
           <p>
-            © 2026 Metatron DAO (Pty) Ltd · Cape Town, South Africa
+            © 2026 Metatron DAO (Pty) Ltd
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
             <a href="/terms" className="hover:text-[var(--text)]">

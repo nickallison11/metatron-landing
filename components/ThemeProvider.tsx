@@ -62,8 +62,7 @@ export function ThemeToggleButton() {
     setMounted(true);
   }, []);
 
-  const sun = "\u2600\uFE0F ";
-  const moon = "\uD83C\uDF19";
+  const showMoon = mounted && theme === "light";
 
   return (
     <button
@@ -77,12 +76,51 @@ export function ThemeToggleButton() {
         background: "transparent",
         color: "var(--text-muted)",
         cursor: "pointer",
-        fontSize: 14,
-        lineHeight: 1,
+        lineHeight: 0,
         minWidth: 36,
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        transition: "color 150ms ease, border-color 150ms ease",
       }}
     >
-      {mounted ? (theme === "dark" ? sun : moon) : sun}
+      {showMoon ? (
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+        </svg>
+      ) : (
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+      )}
     </button>
   );
 }
