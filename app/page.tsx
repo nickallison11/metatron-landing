@@ -142,7 +142,7 @@ export default function Home() {
   return (
     <>
       <header className="nav-metatron fixed top-0 left-0 right-0 z-50">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between border border-black px-4 py-3 sm:px-6">
+        <nav className="flex w-full items-center justify-between border border-black px-4 py-3 sm:px-6">
           <Link href="/" className="flex shrink-0 items-center gap-2">
             <Image
               src="/metatron-logo.png"
