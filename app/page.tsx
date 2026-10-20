@@ -452,7 +452,7 @@ export default function Home() {
                   href={PLATFORM}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--accent-hover)]"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-5 py-2.5 text-sm font-medium text-[var(--text)] transition hover:border-[var(--accent)]/40"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element -- small inline brand mark in link */}
                   <img
