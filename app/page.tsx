@@ -6,8 +6,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const PLATFORM = "https://platform.metatron.id";
-const SIGNUP_FOUNDER = `${PLATFORM}/auth/signup?role=founder`;
 const TELEGRAM_KEVIN = "https://t.me/Kevinmetatron_bot";
+const WHATSAPP_KEVIN = "https://wa.me/15559439544";
 const METATRON_DAO = "https://metatrondao.io";
 const LINKEDIN_URL = "https://www.linkedin.com/company/metatrondao/";
 const DISCORD_URL = "https://discord.gg/metatron";
@@ -147,7 +147,7 @@ export default function Home() {
             <Image
               src="/metatron-logo.png"
               alt="metatron"
-              width={140}
+              width={37}
               height={42}
               className="h-[42px] w-auto"
               unoptimized
@@ -300,7 +300,7 @@ export default function Home() {
           </p>
           <div className="mt-10 flex justify-center">
             <a
-              href={SIGNUP_FOUNDER}
+              href={PLATFORM}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-w-[200px] justify-center rounded-lg bg-[var(--accent)] px-8 py-3 font-medium text-white transition hover:bg-[var(--accent-hover)]"
@@ -463,6 +463,15 @@ export default function Home() {
                   Platform
                 </a>
                 <a
+                  href={WHATSAPP_KEVIN}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-5 py-2.5 text-sm font-medium text-[var(--text)] transition hover:border-[var(--accent)]/40"
+                >
+                  <EcosystemBrandLogo kind="whatsapp" size="sm" />
+                  WhatsApp
+                </a>
+                <a
                   href={TELEGRAM_KEVIN}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -471,17 +480,6 @@ export default function Home() {
                   <EcosystemBrandLogo kind="telegram" size="sm" />
                   Telegram
                 </a>
-                <button
-                  type="button"
-                  disabled
-                  className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-5 py-2.5 text-sm font-medium text-[var(--text-muted)] opacity-60"
-                >
-                  <EcosystemBrandLogo kind="whatsapp" size="sm" />
-                  WhatsApp
-                  <span className="rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-1.5 py-0.5 text-[10px]">
-                    Soon
-                  </span>
-                </button>
               </div>
             </div>
           </div>
@@ -596,7 +594,7 @@ export default function Home() {
                 <li>· 1 investor match/week</li>
               </ul>
               <a
-                href={SIGNUP_FOUNDER}
+                href={PLATFORM}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex justify-center rounded-lg bg-[var(--accent)] px-4 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--accent-hover)]"
@@ -814,9 +812,9 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-5 transition hover:border-[var(--accent)]/40"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element -- explicit <img> for favicon asset per design */}
+                {/* eslint-disable-next-line @next/next/no-img-element -- explicit <img> for the logo asset per design */}
                 <img
-                  src="/favicon-icon.png"
+                  src="/metatron-logo.png"
                   alt=""
                   width={40}
                   height={40}
@@ -829,23 +827,20 @@ export default function Home() {
                   </div>
                 </div>
               </a>
-              <div
-                className="relative flex cursor-not-allowed items-start gap-3 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)]/60 p-5 opacity-60"
-                aria-disabled="true"
+              <a
+                href={WHATSAPP_KEVIN}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-5 transition hover:border-[var(--accent)]/40"
               >
-                <span className="absolute right-3 top-3 rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
-                  Coming soon
-                </span>
                 <EcosystemBrandLogo kind="whatsapp" />
                 <div className="min-w-0 flex-1">
-                  <div className="font-medium text-[var(--text-muted)]">
-                    WhatsApp
-                  </div>
+                  <div className="font-medium text-[var(--text)]">WhatsApp</div>
                   <div className="mt-0.5 break-words text-sm text-[var(--text-muted)]">
-                    Coming soon
+                    wa.me/15559439544
                   </div>
                 </div>
-              </div>
+              </a>
               <a
                 href={TELEGRAM_KEVIN}
                 target="_blank"
@@ -910,7 +905,7 @@ export default function Home() {
       <footer className="py-12">
         <div className="mx-auto max-w-6xl px-4 text-center text-sm text-[var(--text-muted)] sm:px-6">
           <p>
-            © 2026 Metatron DAO (Pty) Ltd
+            © 2026 Metatron Labs (Pty) Ltd
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
             <a href="/terms" className="hover:text-[var(--text)]">
