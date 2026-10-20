@@ -456,9 +456,9 @@ export default function Home() {
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element -- small inline brand mark in link */}
                   <img
-                    src="/favicon-icon.png"
+                    src="/metatron-logo.png"
                     alt="metatron"
-                    className="h-5 w-5"
+                    className="h-6 w-auto"
                   />
                   Platform
                 </a>
