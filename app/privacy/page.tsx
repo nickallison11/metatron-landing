@@ -129,6 +129,72 @@ export default function PrivacyPage() {
           </ul>
         </section>
 
+        <section className="mt-12">
+          <h2 className="text-xl font-semibold text-[var(--text)] sm:text-2xl">
+            Privacy notice (GDPR)
+          </h2>
+          <h3 className="mt-6 font-semibold text-[var(--text)]">Who is responsible</h3>
+          <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
+            The controller for your personal data is [Andrew Nicholas Allison],
+            trading as Metatron Labs, [street and number], [postcode] Freistadt,
+            Austria (contact@metatron.id). See the{" "}
+            <Link href="/impressum" className="text-[var(--accent)] underline-offset-2 hover:underline">
+              Impressum
+            </Link>
+            .
+          </p>
+          <h3 className="mt-6 font-semibold text-[var(--text)]">What we collect and why</h3>
+          <ul className="mt-4 list-disc space-y-2 pl-5 leading-relaxed text-[var(--text-muted)]">
+            <li>
+              <strong className="text-[var(--text)]">Account data</strong> (name, email, password
+              hash, role) to create and run your account: performance of our contract with you
+              (Art. 6(1)(b) GDPR).
+            </li>
+            <li>
+              <strong className="text-[var(--text)]">Profile and deck data</strong> (company,
+              thesis, pitch deck and what Kevin extracts from it) to match founders with
+              investors and make introductions: contract.
+            </li>
+            <li>
+              <strong className="text-[var(--text)]">Messages with Kevin</strong> on the web,
+              WhatsApp, Telegram and email, including your phone number or Telegram ID if you use
+              those channels: contract.
+            </li>
+            <li>
+              <strong className="text-[var(--text)]">Billing data</strong> (plan, invoices; card
+              details are handled by Stripe, not stored by us): contract and legal obligations
+              (Art. 6(1)(b) and (c)).
+            </li>
+            <li>
+              <strong className="text-[var(--text)]">Emails we send</strong>, such as weekly
+              matches, which you can switch off at any time: our legitimate interest
+              (Art. 6(1)(f)) or your consent.
+            </li>
+          </ul>
+          <h3 className="mt-6 font-semibold text-[var(--text)]">Who processes data for us</h3>
+          <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
+            We use these providers, bound by data processing terms: Hostinger (servers),
+            Vercel and Cloudflare (website hosting and network), Resend (email), Stripe
+            (payments), Anthropic, OpenAI and Google (AI models that power Kevin), Pinata
+            (deck file storage), Meta (WhatsApp) and Telegram (messaging). Some are outside
+            the EU; transfers rely on the EU–US Data Privacy Framework or the European
+            Commission&apos;s standard contractual clauses.
+          </p>
+          <h3 className="mt-6 font-semibold text-[var(--text)]">How long we keep it</h3>
+          <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
+            While your account exists. When you delete your account we delete or anonymise
+            your data, except invoices and records we must keep by law (in Austria, generally
+            seven years).
+          </p>
+          <h3 className="mt-6 font-semibold text-[var(--text)]">Your rights</h3>
+          <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
+            You can ask for access to, correction or deletion of your data, restriction of or
+            objection to its processing, and a copy in a portable format. Write to
+            contact@metatron.id. You can also complain to the Austrian data protection
+            authority (Datenschutzbehörde, dsb.gv.at).
+          </p>
+        </section>
+
         <section className="mt-12 border-t border-[var(--border)] pt-12">
           <h2 className="text-xl font-semibold text-[var(--text)] sm:text-2xl">
             Contact

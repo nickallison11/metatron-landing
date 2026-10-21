@@ -92,7 +92,13 @@ export default function TermsPage() {
             <div>
               <dt className="font-medium text-[var(--text)]">metatron</dt>
               <dd className="mt-1 leading-relaxed">
-                means and/or is a reference to metatron (Pty) Ltd
+                means and/or is a reference to Metatron Labs, the trading name of
+                [Andrew Nicholas Allison], a sole trader in Austria ([street and
+                number], [postcode] Freistadt, Austria). See the{" "}
+                <Link href="/impressum" className="text-[var(--accent)] underline-offset-2 hover:underline">
+                  Impressum
+                </Link>
+                .
               </dd>
             </div>
             <div>
@@ -667,7 +673,10 @@ export default function TermsPage() {
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
             The content contained on this website and these terms and conditions
             will be interpreted and implemented in accordance with the laws of
-            the Republic of South Africa.
+            Austria, excluding its conflict-of-law rules and the UN Convention on
+            Contracts for the International Sale of Goods. If you are a consumer,
+            this does not take away the protection of the mandatory consumer laws
+            of the country where you live.
           </p>
         </section>
 
@@ -680,10 +689,10 @@ export default function TermsPage() {
             conditions, you may refer a query, complaint and/or comment to
             metatron at{" "}
             <a
-              href="mailto:legal@metatrondao.io"
+              href="mailto:contact@metatron.id"
               className="text-[var(--accent)] underline-offset-2 hover:underline"
             >
-              legal@metatrondao.io
+              contact@metatron.id
             </a>
             .
           </p>
