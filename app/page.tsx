@@ -801,7 +801,7 @@ export default function Home() {
               Ecosystem
             </h2>
             <p className="mt-3 text-[var(--text-muted)]">
-              Where metatron lives.
+              Where Kevin lives.
             </p>
           </div>
           <div className="mt-12 space-y-4">
