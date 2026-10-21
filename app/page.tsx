@@ -869,6 +869,10 @@ export default function Home() {
             Privacy
           </a>
           <span className="text-[var(--border)]">·</span>
+          <a href="/impressum" className="hover:text-[var(--text)]">
+            Impressum
+          </a>
+          <span className="text-[var(--border)]">·</span>
           <a href="mailto:contact@metatron.id" className="hover:text-[var(--text)]">
             contact@metatron.id
           </a>
