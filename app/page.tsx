@@ -856,48 +856,6 @@ export default function Home() {
                 </div>
               </a>
             </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-              {(
-                [
-                  {
-                    kind: "linkedin" as const,
-                    label: "LinkedIn",
-                    href: LINKEDIN_URL,
-                    handle: "linkedin.com/company/metatrondao",
-                  },
-                  {
-                    kind: "x" as const,
-                    label: "X",
-                    href: X_URL,
-                    handle: "x.com/metatrondao",
-                  },
-                  {
-                    kind: "discord" as const,
-                    label: "Discord",
-                    href: DISCORD_URL,
-                    handle: "discord.gg/metatron",
-                  },
-                ] as const
-              ).map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-5 transition hover:border-[var(--accent)]/40"
-                >
-                  <EcosystemBrandLogo kind={item.kind} />
-                  <div className="min-w-0 flex-1">
-                    <div className="font-medium text-[var(--text)]">
-                      {item.label}
-                    </div>
-                    <div className="mt-0.5 break-words text-sm text-[var(--text-muted)]">
-                      {item.handle}
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
           </div>
         </section>
       </main>
