@@ -93,8 +93,8 @@ export default function TermsPage() {
               <dt className="font-medium text-[var(--text)]">metatron</dt>
               <dd className="mt-1 leading-relaxed">
                 means and/or is a reference to Metatron Labs, the trading name of
-                [Andrew Nicholas Allison], a sole trader in Austria ([street and
-                number], [postcode] Freistadt, Austria). See the{" "}
+                Andrew Nicholas Allison, a sole trader in Austria (Obermayrstraße 5/4,
+                4240 Freistadt, Austria). See the{" "}
                 <Link href="/impressum" className="text-[var(--accent)] underline-offset-2 hover:underline">
                   Impressum
                 </Link>

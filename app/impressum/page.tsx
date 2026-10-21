@@ -48,14 +48,14 @@ export default function ImpressumPage() {
 
         <dl className="mt-10 space-y-5">
           <Row label="Medieninhaber und Diensteanbieter">
-            [Andrew Nicholas Allison]
+            Andrew Nicholas Allison
             <br />
             Einzelunternehmer, handelnd unter der Bezeichnung „Metatron Labs“
           </Row>
           <Row label="Anschrift">
-            [Straße Hausnummer]
+            Obermayrstraße 5/4
             <br />
-            [PLZ] Freistadt
+            4240 Freistadt
             <br />
             Österreich
           </Row>
@@ -70,19 +70,6 @@ export default function ImpressumPage() {
             Kevin, der Gründerinnen und Gründer mit Investorinnen und Investoren vernetzt;
             Vertrieb von Software-Abonnements (Software as a Service).
           </Row>
-          <Row label="UID-Nummer">[ATU00000000]</Row>
-          <Row label="Gewerbe">
-            [Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik]
-            (freies Gewerbe)
-          </Row>
-          <Row label="Gewerbebehörde">Bezirkshauptmannschaft Freistadt</Row>
-          <Row label="Kammerzugehörigkeit">Wirtschaftskammer Oberösterreich</Row>
-          <Row label="Anwendbare Rechtsvorschriften">
-            Gewerbeordnung (GewO), abrufbar unter{" "}
-            <a href="https://www.ris.bka.gv.at" className="text-[var(--text)] hover:underline">
-              www.ris.bka.gv.at
-            </a>
-          </Row>
           <Row label="Grundlegende Richtung">
             Information über die Plattform metatron, den KI-Assistenten Kevin und die
             angebotenen Abonnements.
@@ -92,11 +79,9 @@ export default function ImpressumPage() {
         <section className="mt-14">
           <h2 className="text-xl font-semibold text-[var(--text)]">Legal notice (English)</h2>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            metatron.id is operated by [Andrew Nicholas Allison], a sole trader in Austria
-            trading as Metatron Labs, [street and number], [postcode] Freistadt, Austria.
-            Contact: contact@metatron.id. VAT ID: [ATU00000000]. Trade authority:
-            Bezirkshauptmannschaft Freistadt. Member of the Austrian Economic Chamber (WKO
-            Oberösterreich). Business: developing and operating the metatron software
+            metatron.id is operated by Andrew Nicholas Allison, a sole trader in Austria
+            trading as Metatron Labs, Obermayrstraße 5/4, 4240 Freistadt, Austria.
+            Contact: contact@metatron.id. Business: developing and operating the metatron software
             platform and its AI assistant Kevin, and selling software subscriptions.
           </p>
         </section>

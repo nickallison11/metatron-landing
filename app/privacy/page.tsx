@@ -135,8 +135,8 @@ export default function PrivacyPage() {
           </h2>
           <h3 className="mt-6 font-semibold text-[var(--text)]">Who is responsible</h3>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
-            The controller for your personal data is [Andrew Nicholas Allison],
-            trading as Metatron Labs, [street and number], [postcode] Freistadt,
+            The controller for your personal data is Andrew Nicholas Allison,
+            trading as Metatron Labs, Obermayrstraße 5/4, 4240 Freistadt,
             Austria (contact@metatron.id). See the{" "}
             <Link href="/impressum" className="text-[var(--accent)] underline-offset-2 hover:underline">
               Impressum
