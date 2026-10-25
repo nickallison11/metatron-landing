@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title:
     "metatron — Eliminating information asymmetry between founders and capital — globally",
   description:
-    "AI-powered matchmaking for founders, connectors and investors in emerging markets.",
+    "Build credibility. Get seen. Show investors who you are and what you've built, and get in front of the ones who should know.",
   icons: {
     icon: "/favicon-icon.png",
     shortcut: "/favicon-icon.png",
