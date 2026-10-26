@@ -104,6 +104,8 @@ function EcosystemBrandLogo({
 
 export default function Home() {
   const [billing, setBilling] = useState<"monthly" | "annual">("monthly");
+  const [planRole, setPlanRole] = useState<"founder" | "investor">("founder");
+  const roleLabel = planRole === "founder" ? "Founder" : "Investor";
   const [waitlistName, setWaitlistName] = useState("");
   const [waitlistStartup, setWaitlistStartup] = useState("");
   const [waitlistEmail, setWaitlistEmail] = useState("");
@@ -123,6 +125,7 @@ export default function Home() {
           name: waitlistName,
           startup_name: waitlistStartup,
           email: waitlistEmail,
+          tier: `${roleLabel} Basic / Pro`,
         }),
       });
       if (!res.ok) throw new Error("Request failed");
@@ -282,25 +285,100 @@ export default function Home() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--accent)] opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--accent)]" />
             </span>
-            Build credibility. Get seen.
+            Credibility, both ways.
           </div>
           <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-[var(--text)] sm:text-5xl md:text-6xl">
             Eliminating information asymmetry between founders and capital —
             globally
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--text-muted)] sm:text-xl">
-            Show investors who you are and what you&apos;ve built, and get in
-            front of the ones who should know.
+            Founders show who they are and what they&apos;ve built. Investors
+            find credible founders matched to their thesis.
           </p>
           <div className="mt-10 flex justify-center">
             <a
-              href={PLATFORM}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#roles"
               className="inline-flex min-w-[200px] justify-center rounded-lg bg-[var(--accent)] px-8 py-3 font-medium text-white transition hover:bg-[var(--accent-hover)]"
             >
               Get started here
             </a>
+          </div>
+        </section>
+
+        {/* Who it's for */}
+        <section
+          id="roles"
+          className="mx-auto max-w-4xl scroll-mt-24 px-4 pb-10 sm:px-6"
+        >
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              {
+                role: "Founders",
+                title:
+                  "Build credibility. Get in front of investors who should know you.",
+                points: [
+                  "A public profile and deck investors can trust",
+                  "An Angel Score that shows where you stand",
+                  "See which investors view your deck",
+                ],
+                cta: "Sign up as a founder",
+                href: `${PLATFORM}/auth/signup?role=founder`,
+                primary: true,
+              },
+              {
+                role: "Investors",
+                title:
+                  "Credible founders, matched to your thesis. No cold pitches.",
+                points: [
+                  "Browse founder profiles and decks",
+                  "Find startups that fit what you invest in",
+                  "See every founder's score before you take a meeting",
+                ],
+                cta: "Sign up as an investor",
+                href: `${PLATFORM}/auth/signup?role=investor`,
+                primary: false,
+              },
+            ].map((card) => (
+              <div
+                key={card.role}
+                className="flex flex-col gap-5 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-7"
+              >
+                <p
+                  className="text-xs uppercase tracking-widest text-[var(--accent-teal)]"
+                  style={{ fontFamily: "var(--font-jetbrains-mono), monospace" }}
+                >
+                  {card.role}
+                </p>
+                <h3 className="text-xl font-semibold leading-snug text-[var(--text)]">
+                  {card.title}
+                </h3>
+                <ul className="flex-1 space-y-2.5 text-sm leading-relaxed text-[var(--text-muted)]">
+                  {card.points.map((p) => (
+                    <li key={p} className="flex gap-2.5">
+                      <span className="shrink-0 text-[var(--accent)]" aria-hidden>
+                        ✓
+                      </span>
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-col gap-2.5 text-center text-xs text-[var(--text-muted)]">
+                  <a
+                    href={card.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={
+                      card.primary
+                        ? "inline-flex justify-center rounded-lg bg-[var(--accent)] px-4 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--accent-hover)]"
+                        : "inline-flex justify-center rounded-lg border border-[var(--border)] px-4 py-2.5 text-sm font-medium text-[var(--text)] transition hover:border-[var(--accent)]"
+                    }
+                  >
+                    {card.cta}
+                  </a>
+                  Free to start
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -349,8 +427,8 @@ export default function Home() {
                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                   </svg>
                 ),
-                title: "Emerging Markets First",
-                body: "Built for Africa, Latin America, and Asia. The markets with the highest growth potential and the least access to capital.",
+                title: "Global from day one",
+                body: "Founders and investors anywhere. Strongest where capital is hardest to reach: Africa, Latin America and Asia.",
               },
               {
                 icon: (
@@ -550,7 +628,24 @@ export default function Home() {
             <p className="mt-3 text-[var(--text-muted)]">
               Start free. Upgrade when you&apos;re ready.
             </p>
-            <div className="mt-8 inline-flex rounded-lg border border-[var(--border)] bg-[var(--bg-card)] p-1">
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <div className="inline-flex rounded-lg border border-[var(--border)] bg-[var(--bg-card)] p-1">
+              {(["founder", "investor"] as const).map((r) => (
+                <button
+                  key={r}
+                  type="button"
+                  onClick={() => setPlanRole(r)}
+                  className={`rounded-md px-5 py-2 text-sm font-medium transition ${
+                    planRole === r
+                      ? "bg-[var(--accent)] text-white"
+                      : "text-[var(--text-muted)] hover:text-[var(--text)]"
+                  }`}
+                >
+                  {r === "founder" ? "Founders" : "Investors"}
+                </button>
+              ))}
+            </div>
+            <div className="inline-flex rounded-lg border border-[var(--border)] bg-[var(--bg-card)] p-1">
               <button
                 type="button"
                 onClick={() => setBilling("monthly")}
@@ -574,6 +669,7 @@ export default function Home() {
                 Annual
               </button>
             </div>
+            </div>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -581,14 +677,22 @@ export default function Home() {
             <div className="flex flex-col rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-6">
               <h3 className="text-lg font-semibold text-[var(--text)]">Free</h3>
               <p className="mt-4 text-3xl font-bold text-[var(--text)]">$0</p>
-              <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
-                <li>· Kevin AI chat (20 msg/day)</li>
-                <li>· Kevin on Telegram &amp; WhatsApp</li>
-                <li>· Founder profile + cloud deck link</li>
-                <li>· 1 investor match/week</li>
-              </ul>
+              {planRole === "founder" ? (
+                <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
+                  <li>· Kevin AI chat (20 msg/day)</li>
+                  <li>· Kevin on Telegram &amp; WhatsApp</li>
+                  <li>· Founder profile + cloud deck link</li>
+                  <li>· 1 investor match/week</li>
+                </ul>
+              ) : (
+                <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
+                  <li>· Browse public founder profiles</li>
+                  <li>· Short follow list</li>
+                  <li>· Kevin on Telegram &amp; WhatsApp</li>
+                </ul>
+              )}
               <a
-                href={PLATFORM}
+                href={`${PLATFORM}/auth/signup?role=${planRole}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex justify-center rounded-lg bg-[var(--accent)] px-4 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--accent-hover)]"
@@ -603,7 +707,7 @@ export default function Home() {
                 Coming soon
               </span>
               <h3 className="text-lg font-semibold text-[var(--text)]">
-                Founder Basic
+                {roleLabel} Basic
               </h3>
               {billing === "monthly" ? (
                 <p className="mt-4 text-3xl font-bold text-[var(--text)]">
@@ -627,14 +731,24 @@ export default function Home() {
                   ? "or $99.99/yr (save ~2 months)"
                   : "save ~2 months vs monthly"}
               </p>
-              <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
-                <li>· Everything in Free</li>
-                <li>· Kevin AI chat (200 msg/day)</li>
-                <li>· Call recording + AI analysis</li>
-                <li>· 10 investor matches/week</li>
-                <li>· Permanent IPFS deck storage</li>
-                <li>· Kevin extracts pitch data from deck</li>
-              </ul>
+              {planRole === "founder" ? (
+                <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
+                  <li>· Everything in Free</li>
+                  <li>· Kevin AI chat (200 msg/day)</li>
+                  <li>· Call recording + AI analysis</li>
+                  <li>· 10 investor matches/week</li>
+                  <li>· Permanent IPFS deck storage</li>
+                  <li>· Kevin extracts pitch data from deck</li>
+                </ul>
+              ) : (
+                <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
+                  <li>· Everything in Free</li>
+                  <li>· Full deal-flow visibility</li>
+                  <li>· Kevin match feed (unlimited)</li>
+                  <li>· Pipeline stage management</li>
+                  <li>· Investment memo generation</li>
+                </ul>
+              )}
               <button
                 type="button"
                 disabled
@@ -650,7 +764,7 @@ export default function Home() {
                 Coming soon
               </span>
               <h3 className="text-lg font-semibold text-[var(--text)]">
-                Founder Pro
+                {roleLabel} Pro
               </h3>
               {billing === "monthly" ? (
                 <p className="mt-4 text-3xl font-bold text-[var(--text)]">
@@ -672,15 +786,25 @@ export default function Home() {
               <p className="mt-1 text-xs text-[var(--text-muted)]">
                 {billing === "monthly" ? "or $199.99/yr" : "per year"}
               </p>
-              <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
-                <li>· Everything in Basic</li>
-                <li>· Unlimited Kevin messages + matches</li>
-                <li>· Private encrypted IPFS deck</li>
-                <li>· Angel Score + VDR</li>
-                <li>· Custom AI backend</li>
-                <li>· Custom subdomain (startup.metatron.id)</li>
-                <li>· Embeddable widget</li>
-              </ul>
+              {planRole === "founder" ? (
+                <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
+                  <li>· Everything in Basic</li>
+                  <li>· Unlimited Kevin messages + matches</li>
+                  <li>· Private encrypted IPFS deck</li>
+                  <li>· Angel Score + VDR</li>
+                  <li>· Custom AI backend</li>
+                  <li>· Custom subdomain (startup.metatron.id)</li>
+                  <li>· Embeddable widget</li>
+                </ul>
+              ) : (
+                <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
+                  <li>· Everything in Basic</li>
+                  <li>· Advanced portfolio analytics</li>
+                  <li>· Custom deal-flow workflows</li>
+                  <li>· White-label investor profile</li>
+                  <li>· Priority Kevin AI access</li>
+                </ul>
+              )}
               <button
                 type="button"
                 disabled
@@ -699,10 +823,10 @@ export default function Home() {
           {/* Waitlist */}
           <div className="mx-auto mt-16 max-w-lg rounded-[var(--radius)] border border-[var(--border)] bg-[var(--bg-card)] p-8 text-center">
             <h3 className="text-xl font-semibold text-[var(--text)]">
-              Be first to access Founder Basic & Pro
+              Be first to access {roleLabel} Basic & Pro
             </h3>
             <p className="mt-2 text-sm text-[var(--text-muted)]">
-              Founder Basic and Pro are coming soon. Join the waitlist and
+              {roleLabel} Basic and Pro are coming soon. Join the waitlist and
               we&apos;ll notify you when they launch.
             </p>
             {waitlistStatus === "success" ? (
@@ -722,7 +846,9 @@ export default function Home() {
                 <input
                   type="text"
                   required
-                  placeholder="Startup name"
+                  placeholder={
+                    planRole === "founder" ? "Startup name" : "Fund or firm name"
+                  }
                   value={waitlistStartup}
                   onChange={(e) => setWaitlistStartup(e.target.value)}
                   className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm text-[var(--text)] placeholder:text-[var(--text-muted)] focus:border-[var(--accent)] focus:outline-none"
@@ -858,7 +984,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-center gap-3">
           {/* eslint-disable-next-line @next/next/no-img-element -- small footer logo, matches the platform footer */}
           <img src="/metatron-logo.png" alt="metatron" className="h-[28px] w-auto opacity-70" />
-          <p className="text-[12px] text-[var(--text-muted)]">© 2026 metatron</p>
+          <p className="text-[12px] text-[var(--text-muted)]">© 2026 metatron AI Labs</p>
         </div>
         <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[12px] text-[var(--text-muted)]">
           <a href="/terms" className="hover:text-[var(--text)]">
