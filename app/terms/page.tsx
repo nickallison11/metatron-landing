@@ -92,7 +92,7 @@ export default function TermsPage() {
             <div>
               <dt className="font-medium text-[var(--text)]">metatron</dt>
               <dd className="mt-1 leading-relaxed">
-                means and/or is a reference to metatron AI Labs, the trading name of
+                means and/or is a reference to metatronLabs, the trading name of
                 Andrew Nicholas Allison, a sole trader in Austria (Obermayrstraße 5/4,
                 4240 Freistadt, Austria). See the{" "}
                 <Link href="/impressum" className="text-[var(--accent)] underline-offset-2 hover:underline">

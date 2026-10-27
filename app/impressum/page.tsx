@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Impressum — metatron",
-  description: "Impressum and legal notice for metatron.id (metatron AI Labs, Austria).",
+  description: "Impressum and legal notice for metatron.id (metatronLabs, Austria).",
 };
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
@@ -50,7 +50,7 @@ export default function ImpressumPage() {
           <Row label="Medieninhaber und Diensteanbieter">
             Andrew Nicholas Allison
             <br />
-            Einzelunternehmer, handelnd unter der Bezeichnung „metatron AI Labs“
+            Einzelunternehmer, handelnd unter der Bezeichnung „metatronLabs“
           </Row>
           <Row label="Anschrift">
             Obermayrstraße 5/4
@@ -80,7 +80,7 @@ export default function ImpressumPage() {
           <h2 className="text-xl font-semibold text-[var(--text)]">Legal notice (English)</h2>
           <p className="mt-4 leading-relaxed text-[var(--text-muted)]">
             metatron.id is operated by Andrew Nicholas Allison, a sole trader in Austria
-            trading as metatron AI Labs, Obermayrstraße 5/4, 4240 Freistadt, Austria.
+            trading as metatronLabs, Obermayrstraße 5/4, 4240 Freistadt, Austria.
             Contact: contact@metatron.id. Business: developing and operating the metatron software
             platform and its AI assistant Kevin, and selling software subscriptions.
           </p>

@@ -984,7 +984,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-center gap-3">
           {/* eslint-disable-next-line @next/next/no-img-element -- small footer logo, matches the platform footer */}
           <img src="/metatron-logo.png" alt="metatron" className="h-[28px] w-auto opacity-70" />
-          <p className="text-[12px] text-[var(--text-muted)]">© 2026 metatron AI Labs</p>
+          <p className="text-[12px] text-[var(--text-muted)]">© 2026 metatronLabs</p>
         </div>
         <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[12px] text-[var(--text-muted)]">
           <a href="/terms" className="hover:text-[var(--text)]">
