@@ -678,16 +678,19 @@ export default function Home() {
               <p className="mt-4 text-3xl font-bold text-[var(--text)]">$0</p>
               {planRole === "founder" ? (
                 <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
-                  <li>· Kevin AI chat (20 msg/day)</li>
-                  <li>· Kevin on Telegram &amp; WhatsApp</li>
-                  <li>· Founder profile + cloud deck link</li>
+                  <li>· Kevin on WhatsApp, Telegram or your own AI</li>
+                  <li>· 20 Kevin messages/day</li>
+                  <li>· Founder profile + pitch deck</li>
+                  <li>· Angel Score</li>
                   <li>· 1 investor match/week</li>
                 </ul>
               ) : (
                 <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
-                  <li>· Browse public founder profiles</li>
-                  <li>· Short follow list</li>
-                  <li>· Kevin on Telegram &amp; WhatsApp</li>
+                  <li>· Kevin on WhatsApp, Telegram or your own AI</li>
+                  <li>· 20 Kevin messages/day</li>
+                  <li>· Browse founder profiles + decks</li>
+                  <li>· Pipeline + investment memos</li>
+                  <li>· 1 founder match/week</li>
                 </ul>
               )}
               <a
@@ -733,19 +736,16 @@ export default function Home() {
               {planRole === "founder" ? (
                 <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
                   <li>· Everything in Free</li>
-                  <li>· Kevin AI chat (200 msg/day)</li>
-                  <li>· Call recording + AI analysis</li>
+                  <li>· 200 Kevin messages/day</li>
                   <li>· 10 investor matches/week</li>
-                  <li>· Permanent IPFS deck storage</li>
-                  <li>· Kevin extracts pitch data from deck</li>
+                  <li>· Kevin fills in your profile from your deck</li>
+                  <li>· Full Angel Score breakdown</li>
                 </ul>
               ) : (
                 <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
                   <li>· Everything in Free</li>
-                  <li>· Full deal-flow visibility</li>
-                  <li>· Kevin match feed (unlimited)</li>
-                  <li>· Pipeline stage management</li>
-                  <li>· Investment memo generation</li>
+                  <li>· 200 Kevin messages/day</li>
+                  <li>· 10 founder matches/week</li>
                 </ul>
               )}
               <button
@@ -788,20 +788,16 @@ export default function Home() {
               {planRole === "founder" ? (
                 <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
                   <li>· Everything in Basic</li>
-                  <li>· Unlimited Kevin messages + matches</li>
-                  <li>· Private encrypted IPFS deck</li>
-                  <li>· Angel Score + VDR</li>
-                  <li>· Custom AI backend</li>
-                  <li>· Custom subdomain (startup.metatron.id)</li>
-                  <li>· Embeddable widget</li>
+                  <li>· Unlimited Kevin messages</li>
+                  <li>· 25 investor matches/week</li>
+                  <li>· Call recording + AI analysis</li>
                 </ul>
               ) : (
                 <ul className="mt-6 flex-1 space-y-2 text-sm text-[var(--text-muted)]">
                   <li>· Everything in Basic</li>
-                  <li>· Advanced portfolio analytics</li>
-                  <li>· Custom deal-flow workflows</li>
-                  <li>· White-label investor profile</li>
-                  <li>· Priority Kevin AI access</li>
+                  <li>· Unlimited Kevin messages</li>
+                  <li>· 25 founder matches/week</li>
+                  <li>· Call recording + AI analysis</li>
                 </ul>
               )}
               <button
