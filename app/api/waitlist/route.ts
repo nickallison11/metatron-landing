@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const BACKEND_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://platform.metatron.id";
+  process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://api.metatron.id";
 
 export async function POST(req: NextRequest) {
   try {

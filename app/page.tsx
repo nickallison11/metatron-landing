@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const PLATFORM = "https://platform.metatron.id";
+const PLATFORM = "https://kevin.metatron.id";
 const TELEGRAM_KEVIN = "https://t.me/Kevinmetatron_bot";
 const WHATSAPP_KEVIN = "https://wa.me/15559439544";
 const METATRON_DAO = "https://metatrondao.io";
@@ -943,7 +943,7 @@ export default function Home() {
                 <div className="min-w-0 flex-1">
                   <div className="font-medium text-[var(--text)]">Platform</div>
                   <div className="mt-0.5 break-words text-sm text-[var(--text-muted)]">
-                    platform.metatron.id
+                    kevin.metatron.id
                   </div>
                 </div>
               </a>
