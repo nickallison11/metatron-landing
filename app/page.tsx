@@ -532,7 +532,7 @@ export default function Home() {
                     alt="metatron"
                     className="h-6 w-auto"
                   />
-                  Platform
+                  Kevin
                 </a>
                 <a
                   href={WHATSAPP_KEVIN}
