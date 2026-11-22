@@ -941,7 +941,7 @@ export default function Home() {
                   className="h-10 w-10 shrink-0 object-contain"
                 />
                 <div className="min-w-0 flex-1">
-                  <div className="font-medium text-[var(--text)]">Platform</div>
+                  <div className="font-medium text-[var(--text)]">Kevin</div>
                   <div className="mt-0.5 break-words text-sm text-[var(--text-muted)]">
                     kevin.metatron.id
                   </div>
