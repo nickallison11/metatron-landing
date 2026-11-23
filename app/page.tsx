@@ -288,8 +288,7 @@ export default function Home() {
             Credibility, both ways.
           </div>
           <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-[var(--text)] sm:text-5xl md:text-6xl">
-            Eliminating information asymmetry between founders and capital —
-            globally
+            Great founders exist everywhere. Now capital can find them.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--text-muted)] sm:text-xl">
             Founders show who they are and what they&apos;ve built. Investors

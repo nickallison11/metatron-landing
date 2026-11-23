@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title:
-    "metatron — Eliminating information asymmetry between founders and capital — globally",
+    "metatron — Great founders exist everywhere. Now capital can find them.",
   description:
     "Credibility, both ways. Founders show who they are and what they've built. Investors find credible founders matched to their thesis.",
   icons: {
